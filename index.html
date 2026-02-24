@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tiago Cruz - Software Engineer Resume</title>
+    <style>
+        :root {
+            --text-color: #333;
+            --header-color: #000;
+            --accent-color: #444;
+        }
+
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.5;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--header-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24pt;
+            color: var(--header-color);
+        }
+
+        h2 {
+            font-size: 14pt;
+            border-bottom: 1px solid #ccc;
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin-bottom: 5px;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            color: var(--accent-color);
+        }
+
+        .job-entry {
+            margin-bottom: 20px;
+
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .job-tools {
+            font-size: 10.5pt;
+            margin-bottom: 4px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        li {
+            font-size: 10.5pt;
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: var(--accent-color);
+        }
+
+        @media print {
+            .container {
+                padding: 0;
+                width: 100%;
+            }
+
+            .job-entry {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: var(--text-color);
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>TIAGO CRUZ</h1>
+            <div class="contact-info">
+                Lisbon, Portugal | <a href="mailto:tiagocruz100@gmail.com" target="_blank">tiagocruz100@gmail.com</a> |
+                <a href="https://linkedin.com/in/tiagocruz100" target="_blank">linkedin.com/in/tiagocruz100</a> | <a
+                    href="https://github.com/TaoRS" target="_blank">github.com/TaoRS</a>
+            </div>
+        </header>
+
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>Strategic Technology Leader with 10+ years of experience developing for the web. Proven track record of
+                scaling distributed systems and leading cross-functional teams to deliver high-impact software
+                solutions.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <p><strong>Languages:</strong> Typescript, HTML, CSS</p>
+            <p><strong>Frameworks/Tools:</strong> Angular, React, Tailwind, Storybook, Git, Containers, Node</p>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Senior Engineer | TLSContact</span>
+                    <span>2025</span>
+                </div>
+
+                <ul>
+                    <li>Improved server speed by up to 90% by implementing HTTP caching techniques.</li>
+                    <li>Improved development speed, complexity and bug reproducibility (no more "works on my machine"),
+                        in a multi-repo development environment, by using npm link for local package development.</li>
+                    <li>Fixed critical NPM security issues by updating all packages to their latest version.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Lead Next.js Engineer | Pulsely.io</span>
+                    <span>2025</span>
+                </div>
+
+                <ul>
+                    <li>Improved code security and automated deploys by creating CI/CD pipelines on BitBucket.</li>
+                    <li>Introduced component documentation by implementing Storybook.</li>
+                    <li>Improved website usability by developing with a mobile first approach.</li>
+                    <li>Responsible for managing AWS (EC2, Amplify).</li>
+                    <li>Led project transition to Typescript.</li>
+                    <li>Reduced user login and registration friction by creating an encrypted "login magic link" on a
+                        Express.js server.</li>
+                    <li>Took an active role in bridging the gap between the Design, Product and Development teams.</li>
+                    <li>Led the transition to a monorepo setup.</li>
+                    <li>Designed and led interviews for frontend developer roles.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Lead Angular Architect & Engineer | ePharma</span>
+                    <span>2023 &ndash; 2025</span>
+                </div>
+
+                <ul>
+                    <li>Designed and developed the Architecture for complex Angular applications.</li>
+                    <li>Implemented a NX.dev Frontend Monorepo</li>
+                    <li>Improved code security and reliability by automating build, lint and unit testing CI/CD
+                        pipelines on Azure Devops.</li>
+                    <li>Improved work visibility and effort estimations by implementing SCRUM.</li>
+                    <li>Designed and led interviews for frontend developer roles.</li>
+                    <li>Coached junior developers on a daily basis.</li>
+                    <li>Improved team knowledge sharing and code uniformity by introducing mandatory code reviews.</li>
+                    <li>Took an active role in bridging the gap between the Design, Product and Development teams.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>UI developer | Altar.io</span>
+                    <span>2022 &ndash; 2023</span>
+                </div>
+
+                <ul>
+                    <li>Responsible for developing pixel perfect, responsive and mobile first user interfaces</li>
+                </ul>
+
+                <div class="job-tools"><strong>Frameworks/Tools:</strong> Angular, React, CSS, Tailwind, Figma</div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Angular Developer | DSwiss</span>
+                    <span>2021 &ndash; 2022</span>
+                </div>
+
+                <div class="job-tools"><strong>Frameworks/Tools:</strong> Angular, NgRx, NX.dev, Cypress, Jest.</div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Lead Frontend Developer | Freelancermap</span>
+                    <span>2020 &ndash; 2021</span>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Lead Frontend Developer | Santander</span>
+                    <span>2019</span>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Frontend Developer | LogOn</span>
+                    <span>2018 &ndash; 2019</span>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Frontend Developer | Fujitsu</span>
+                    <span>2017</span>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Full stack developer | Create Business S.A.</span>
+                    <span>2017</span>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Junior Full stack Developer | Closer</span>
+                    <span>2012</span>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Full stack developer | ZATL</span>
+                    <span>2012</span>
+                </div>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Full stack developer | Ulisancas</span>
+                    <span>2011</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="job-header">
+                <span>Computer Programmer | IEFP</span>
+                <span>Graduated 2011</span>
+            </div>
+
+            <h2>Certifications</h2>
+            <div class="job-header">
+                <span>Conflict Management From A Professional Perspective | Findmore Academy</span>
+                <span>2021</span>
+            </div>
+
+            <div class="job-header">
+                <span>Building A React.Js App | Findmore Academy</span>
+                <span>2020</span>
+            </div>
+
+            <div class="job-header">
+                <span>Leveling Up On VueJS: Creating An Advanced Web Application | Findmore Academy</span>
+                <span>2019</span>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

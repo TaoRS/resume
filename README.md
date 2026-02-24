@@ -1,0 +1,1 @@
+The code and layout of this resume are licensed under MIT. However, the content (the text, personal experience, and specific phrasing) is my personal intellectual property. Please do not plagiarize my professional history.
