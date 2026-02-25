@@ -4,26 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Tiago Cruz - Software Engineer Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         :root {
-            --text-color: #333;
-            --header-color: #000;
-            --accent-color: #444;
+            --bg-color: #fafaff;
+            --text-color: #333344;
+            --header-color: #2d2640;
+            --accent-color: #6d597a;
+            --border-color: #e2e2ec;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121016;
+                --text-color: #d1d1e0;
+                --header-color: #f1eeff;
+                --accent-color: #9d8dbd;
+                --border-color: #2d2a37;
+            }
+        }
+
+        html,
+        body {
+            height: 100dvh;
+            width: 100dvw;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
         }
 
         body {
             font-family: 'Helvetica', 'Arial', sans-serif;
             line-height: 1.5;
             color: var(--text-color);
-            margin: 0;
-            padding: 0;
         }
 
         .container {
-            width: 100%;
-            max-width: 800px;
-            margin: auto;
-            padding: 40px;
+            max-width: 100dvw;
+            margin: 0 auto;
+            padding: 1.5rem;
         }
 
         header {
@@ -40,7 +59,7 @@
 
         h2 {
             font-size: 14pt;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid var(--border-color);
             margin-top: 25px;
             text-transform: uppercase;
         }
@@ -57,12 +76,11 @@
 
         .job-entry {
             margin-bottom: 20px;
-
         }
 
         .job-header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column-reverse;
             font-weight: bold;
         }
 
@@ -85,7 +103,37 @@
             color: var(--accent-color);
         }
 
+        .institution {
+            color: var(--accent-color);
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                max-width: 800px;
+                padding-inline: 3rem;
+            }
+
+            .job-header {
+                justify-content: space-between;
+                flex-direction: row;
+            }
+        }
+
+        @media screen {
+            .page-footer {
+                display: none;
+            }
+        }
+
         @media print {
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #333333;
+                --header-color: #000000;
+                --accent-color: #444444;
+                --border-color: #cccccc;
+            }
+
             .container {
                 padding: 0;
                 width: 100%;
@@ -102,6 +150,14 @@
             a {
                 color: var(--text-color);
                 text-decoration: none;
+            }
+
+            .page-footer {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                font-size: 10pt;
+                color: var(--text-color);
             }
         }
     </style>
@@ -137,7 +193,9 @@
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Senior Engineer | TLSContact</span>
+                    <span>Senior Engineer |
+                        <span class="institution">TLSContact</span>
+                    </span>
                     <span>2025</span>
                 </div>
 
@@ -151,12 +209,15 @@
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Lead Next.js Engineer | Pulsely.io</span>
+                    <span>Lead Next.js Engineer |
+                        <span class="institution">Pulsely.io</span>
+                    </span>
                     <span>Feb 2025 &ndash; Aug 2025</span>
                 </div>
 
                 <ul>
-                    <li>Improved code security and automated deploys by creating CI/CD pipelines on BitBucket.</li>
+                    <li>Improved code security and automated deploys by creating CI/CD pipelines, leveraging
+                        containers, on BitBucket.</li>
                     <li>Introduced component documentation by implementing Storybook.</li>
                     <li>Improved website usability by developing with a mobile first approach.</li>
                     <li>Responsible for managing AWS (EC2, Amplify).</li>
@@ -171,7 +232,9 @@
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Lead Angular Architect & Engineer | ePharma</span>
+                    <span>Lead Angular Architect & Engineer |
+                        <span class="institution">ePharma</span>
+                    </span>
                     <span>2023 &ndash; 2025</span>
                 </div>
 
@@ -190,7 +253,9 @@
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>UI developer | Altar.io</span>
+                    <span>UI developer |
+                        <span class="institution">Altar.io</span>
+                    </span>
                     <span>2022 &ndash; 2023</span>
                 </div>
 
@@ -203,7 +268,9 @@
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Angular Developer | DSwiss</span>
+                    <span>Angular Developer |
+                        <span class="institution">DSwiss</span>
+                    </span>
                     <span>2021 &ndash; 2022</span>
                 </div>
 
@@ -218,56 +285,72 @@
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Lead Frontend Developer | Freelancermap</span>
+                    <span>Lead Frontend Developer |
+                        <span class="institution">Freelancermap</span>
+                    </span>
                     <span>2020 &ndash; 2021</span>
                 </div>
             </div>
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Lead UI/UX Developer | Santander</span>
+                    <span>Lead UI/UX Developer |
+                        <span class="institution">Santander</span>
+                    </span>
                     <span>2019</span>
                 </div>
             </div>
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Frontend Developer | LogOn</span>
+                    <span>Frontend Developer |
+                        <span class="institution">LogOn</span>
+                    </span>
                     <span>2018 &ndash; 2019</span>
                 </div>
             </div>
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Junior Frontend Developer | Fujitsu</span>
+                    <span>Junior Frontend Developer |
+                        <span class="institution">Fujitsu</span>
+                    </span>
                     <span>2017 &ndash; 2018</span>
                 </div>
             </div>
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Full stack developer | Create Business S.A.</span>
+                    <span>Full stack developer |
+                        <span class="institution">Create Business S.A.</span>
+                    </span>
                     <span>2017</span>
                 </div>
             </div>
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Junior Full stack Developer | Closer</span>
+                    <span>Junior Full stack Developer |
+                        <span class="institution">Closer</span>
+                    </span>
                     <span>2012</span>
                 </div>
             </div>
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Full stack developer | ZATL</span>
+                    <span>Full stack developer |
+                        <span class="institution">ZATL</span>
+                    </span>
                     <span>2012</span>
                 </div>
             </div>
 
             <div class="job-entry">
                 <div class="job-header">
-                    <span>Full stack developer | Ulisancas</span>
+                    <span>Full stack developer |
+                        <span class="institution">Ulisancas</span>
+                    </span>
                     <span>2011</span>
                 </div>
             </div>
@@ -275,29 +358,51 @@
 
         <section id="education">
             <h2>Education</h2>
-            <div class="job-header">
-                <span>Computer Programmer | IEFP</span>
-                <span>Graduated 2011</span>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Computer Programmer |
+                        <span class="institution">IEFP</span>
+                    </span>
+                    <span>Graduated 2011</span>
+                </div>
             </div>
 
             <div class="avoid-break-inside">
                 <h2>Certifications</h2>
-                <div class="job-header">
-                    <span>Conflict Management From A Professional Perspective | Findmore Academy</span>
-                    <span>2021</span>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <span>Conflict Management From A Professional Perspective |
+                            <span class="institution">Findmore Academy</span>
+                        </span>
+                        <span>2021</span>
+                    </div>
                 </div>
 
-                <div class="job-header">
-                    <span>Building A React.Js App | Findmore Academy</span>
-                    <span>2020</span>
+                <div class="job-entry">
+                    <div class="job-header">
+                        <span>Building A React.Js App |
+                            <span class="institution">Findmore Academy</span>
+                        </span>
+                        <span>2020</span>
+                    </div>
                 </div>
 
-                <div class="job-header">
-                    <span>Leveling Up On VueJS: Creating An Advanced Web Application | Findmore Academy</span>
-                    <span>2019</span>
+                <div class="job-entry">
+                    <div class="job-header">
+                        <span>Leveling Up On VueJS: Creating An Advanced Web Application |
+                            <span class="institution">Findmore Academy</span>
+                        </span>
+                        <span>2019</span>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <div class="page-footer">
+            Tiago Cruz - Software Engineer Resume
+        </div>
     </div>
 
 </body>
